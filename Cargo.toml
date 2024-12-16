@@ -1,0 +1,21 @@
+[package]
+name = "doip_rw_tokio"
+version = "0.1.0"
+authors = [ "Robert Jarzmik <robert.jarzmik@free.fr>"]
+categories = [ "network-programming", "asynchronous" ]
+license = "MIT"
+repository = "https://github.com/rjarzmik/doip_rw_tokio.git"
+keywords = [ "network", "protocol", "io", "async", "non-blocking" ]
+edition = "2021"
+description = "Diagnostic over IP asynchronous API to implement a DoIP tester or entity"
+
+[dependencies]
+byteorder = { version = "1" }
+thiserror = "1.0.61"
+tokio = { version = "1.0", features = ["full"] }
+doip_rw = { version = "0.1", git = "https://github.com/rjarzmik/doip_rw.git", branch = "main" }
+log = "0.4.22"
+
+[dev-dependencies]
+env_logger = "0.11.5"
+regex = "1.11.0"
